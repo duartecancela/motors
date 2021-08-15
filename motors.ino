@@ -7,8 +7,12 @@ DFC-77 robot motors control code
 */
  
 // initialize pins
+// Right motor
+int rightMotorEn = 9;
 int rightMotorIn1 = 4;
 int rightMotorIn2 = 5;
+// left motor
+int leftMotorEn = 10;
 int leftMotorIn3 = 6;
 int leftMotorIn4 = 7;
   
@@ -24,9 +28,10 @@ void setup()
 void loop()
 {
  // Rotate right motor clockwise
+ analogWrite(rightMotorEn, 125);
  digitalWrite(rightMotorIn1, HIGH);
  digitalWrite(rightMotorIn2, LOW);
- delay(2000);
+ delay(4000);
  // Stop right motor
  digitalWrite(rightMotorIn1, HIGH);
  digitalWrite(rightMotorIn2, HIGH);
@@ -34,7 +39,7 @@ void loop()
  // Rotate  left motor clockwise
  digitalWrite(leftMotorIn3, HIGH);
  digitalWrite(leftMotorIn4, LOW);
- delay(2000);
+ delay(4000);
  // Stop left motor
  digitalWrite(leftMotorIn3, HIGH);
  digitalWrite(leftMotorIn4, HIGH);
@@ -43,7 +48,7 @@ void loop()
  // Rotate right motor counterclockwise
  digitalWrite(rightMotorIn1, LOW);
  digitalWrite(rightMotorIn2, HIGH);
- delay(2000);
+ delay(4000);
  // Stop right motor
  digitalWrite(rightMotorIn1, HIGH);
  digitalWrite(rightMotorIn2, HIGH);
@@ -51,7 +56,7 @@ void loop()
  //Rotate left motor counterclockwise
  digitalWrite(leftMotorIn3, LOW);
  digitalWrite(leftMotorIn4, HIGH);
- delay(2000);
+ delay(4000);
  // Stop left motor
  digitalWrite(leftMotorIn3, HIGH);
  digitalWrite(leftMotorIn4, HIGH);
