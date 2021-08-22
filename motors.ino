@@ -84,19 +84,18 @@ void loop()
   int xAxis = analogRead(A0); // Read Joysticks X-axis
   int yAxis = analogRead(A1); // Read Joysticks Y-axis
 
-  rotateRightMotorsFWD();
-  
-  stopRightMotors();
+  Serial.print("xAxis = ");
+  Serial.print(xAxis);
+  Serial.print(" | yAxis = ");
+  Serial.print(yAxis);
+  Serial.println();
 
-  rotateLeftMotorsFWD();
-  
-  stopLeftMotors();
-
-  rotateRightMotorsBWD();
-  
-  stopRightMotors();
-  
-  rotateLeftMotorsBWD();
-  
-  stopLeftMotors();
+//  rotateRightMotorsFWD();
+//  stopRightMotors();
+//  rotateLeftMotorsFWD();
+//  stopLeftMotors();
+//  rotateRightMotorsBWD();
+//  stopRightMotors();
+//  rotateLeftMotorsBWD();
+//  stopLeftMotors();
 }
